@@ -6,7 +6,18 @@ const MainLayout = ({ children }) => {
   return (
     <div style={{ height: "100vh" }}>
       <Layout style={{ height: "100%" }}>
-        <Header>Header</Header>
+        <Header style={{ margin: 0, padding: 0 }}>
+          <Row
+            style={{ backgroundColor: "gray" }}
+            justify="start"
+            align="middle"
+          >
+            <Col span={2}>flechita</Col>
+            <Col offset={4} span={12}>
+              Logo
+            </Col>
+          </Row>
+        </Header>
         <Content>
           <Row justify="center" style={{ height: "100%" }}>
             <Col
@@ -22,7 +33,7 @@ const MainLayout = ({ children }) => {
             </Col>
           </Row>
         </Content>
-        <Footer>Footer</Footer>
+        {/* <Footer>Footer</Footer> */}
       </Layout>
     </div>
   );
