@@ -1,20 +1,18 @@
 import { Card, Col } from "antd";
 const { Meta } = Card;
-const OptionCard = () => (
+const OptionCard = ({ url, title, description }) => (
   <Col xs={12} md={12} >
     <Card
       hoverable
-      // style={{
-      //   width: 240,
-      // }}
       cover={
         <img
           alt="example"
-          src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png"
+          src={url}
+
         />
       }
     >
-      <Meta title="Europe Street beat" description="www.instagram.com" />
+      <Meta title={title} description={description} />
     </Card>
   </Col>
 );
