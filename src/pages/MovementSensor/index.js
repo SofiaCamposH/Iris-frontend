@@ -64,6 +64,7 @@ const MovementSensor = () => {
       }}
     >
       <DatePicker
+        inputReadOnly
         disabledDate={disableDatesAfterToday}
         onChange={onChange}
         defaultValue={dayjs()}

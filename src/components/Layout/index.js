@@ -23,7 +23,7 @@ const MainLayout = ({ children }) => {
             <ArrowLeftOutlined style={{ fontSize: "24px", color: "#3E4095" }} />
           </Col>
           <Col offset={4} span={12}>
-            <Image src={Logo} width={100} height={50} />
+            <Image src={Logo} width={100} height={50} preview={false} />
           </Col>
         </Row>
       </Header>
@@ -51,6 +51,7 @@ const MainLayout = ({ children }) => {
       </Content>
       <div style={{ position: "absolute", left: -5, bottom: -10 }}>
         <Image
+          preview={false}
           src={Background}
           width={300}
           height={500}

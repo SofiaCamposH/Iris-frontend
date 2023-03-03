@@ -24,7 +24,10 @@ function App() {
             <Route path="sensors/heart" element={<HeartSensor />} />
             <Route path="sensors/movement" element={<MovementSensor />} />
 
-            <Route path="*" element={<Image src={Image404} />} />
+            <Route
+              path="*"
+              element={<Image src={Image404} preview={false} />}
+            />
           </Routes>
         </Row>
       </MainLayout>
