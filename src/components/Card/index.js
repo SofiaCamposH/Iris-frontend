@@ -1,19 +1,26 @@
-import { Card, Col } from "antd";
+import { Card } from "antd";
+import { Link } from "react-router-dom";
 const { Meta } = Card;
-const OptionCard = ({ url, title, description }) => (
-  <Col xs={12} md={12} >
+
+const OptionCard = ({ logo, title, description, url }) => (
+  <Link to={url}>
     <Card
       hoverable
       cover={
         <img
           alt="example"
-          src={url}
-
+          src={logo}
+          style={{
+            height: "100px",
+            width: "120px",
+            margin: "auto",
+            marginTop: "15px",
+          }}
         />
       }
     >
       <Meta title={title} description={description} />
     </Card>
-  </Col>
+  </Link>
 );
 export default OptionCard;
