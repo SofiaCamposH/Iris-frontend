@@ -9,6 +9,7 @@ import UserList from "./components/List";
 import Login from "./pages/Login";
 import Image404 from "./media/404.png";
 import HeartSensor from "./pages/HeartSensor";
+import MovementSensor from "./pages/MovementSensor";
 
 function App() {
   return (
@@ -21,8 +22,7 @@ function App() {
             <Route path="sensors" element={<Sensors />} />
 
             <Route path="sensors/heart" element={<HeartSensor />} />
-
-            {/* same as above but sensors has children */}
+            <Route path="sensors/movement" element={<MovementSensor />} />
 
             <Route path="*" element={<Image src={Image404} />} />
           </Routes>
