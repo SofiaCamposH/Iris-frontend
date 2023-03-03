@@ -1,4 +1,5 @@
-import React, { useEffect } from "react";
+import React, { useCallback, useEffect } from "react";
+import { message } from "antd";
 import {
   Chart as ChartJS,
   CategoryScale,
@@ -35,7 +36,6 @@ const HeartSensor = () => {
     fetchData();
   }, []);
 
-  //   if isReading is true, then call the function every 5 second
   useEffect(() => {
     if (isReading) {
       const interval = setInterval(() => {
@@ -48,6 +48,24 @@ const HeartSensor = () => {
       return () => clearInterval(interval);
     }
   }, [isReading]);
+
+  const [messageApi, contextHolder] = message.useMessage();
+
+  const error = useCallback(() => {
+    messageApi.open({
+      type: "error",
+      content: "Last BPM is too high! please check the patient",
+    });
+  }, [messageApi]);
+
+  useEffect(() => {
+    if (heartRate.length > 0) {
+      const lastReading = heartRate[heartRate.length - 1];
+      if (lastReading.reading > 80) {
+        error();
+      }
+    }
+  }, [error, heartRate]);
 
   const options = {
     responsive: true,
@@ -78,6 +96,7 @@ const HeartSensor = () => {
 
   return (
     <>
+      {contextHolder}
       <Line data={data} options={options} />
       <div
         style={{
