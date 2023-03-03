@@ -36,6 +36,7 @@ const MovementSensor = () => {
       acc[date].push(movement);
       return acc;
     }, {});
+    setCurrentMovement(movementsByDate[format(new Date(), "yyyy-MM-dd")]);
     return movementsByDate;
   };
 
@@ -78,7 +79,11 @@ const MovementSensor = () => {
           <Card bordered={false}>
             <Statistic
               title="Active"
-              value={(currentMovement.length * 100) / 16}
+              value={
+                currentMovement.length >= 16
+                  ? 100
+                  : (currentMovement.length * 100) / 16
+              }
               precision={2}
               valueStyle={{
                 color: "#3f8600",
@@ -92,7 +97,11 @@ const MovementSensor = () => {
           <Card bordered={false}>
             <Statistic
               title="Idle"
-              value={((16 - currentMovement.length) * 100) / 16}
+              value={
+                currentMovement.length >= 16
+                  ? 0
+                  : ((16 - currentMovement.length) * 100) / 16
+              }
               precision={2}
               valueStyle={{
                 color: "#cf1322",
