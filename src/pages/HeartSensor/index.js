@@ -103,6 +103,7 @@ const HeartSensor = () => {
             justifyContent: "center",
             alignItems: "center",
             margin: 0,
+            marginTop: 30,
             boxShadow: "0px 0px 10px 0px rgba(0,0,0,0.2)",
           }}
         >
