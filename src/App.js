@@ -10,6 +10,7 @@ import Login from "./pages/Login";
 import Image404 from "./media/404.png";
 import HeartSensor from "./pages/HeartSensor";
 import MovementSensor from "./pages/MovementSensor";
+import LocationSensor from "./pages/LocationSensor";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
 
             <Route path="sensors/heart" element={<HeartSensor />} />
             <Route path="sensors/movement" element={<MovementSensor />} />
+            <Route path="sensors/location" element={<LocationSensor />} />
 
             <Route
               path="*"

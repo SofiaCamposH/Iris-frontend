@@ -1,0 +1,200 @@
+Copy code .pin-container {
+  position: relative;
+  width: 50px;
+  height: 100px;
+}
+
+.circle {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #fff;
+  border: 2px solid #3e4095;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.circle::after {
+  content: "";
+  position: absolute;
+  bottom: -14.5px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 15px solid #3e4095;
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+}
+.dot {
+  /* this goes at the very bottom of the pin */
+  position: absolute;
+  bottom: -73px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  width: 20px;
+  height: 20px;
+  border-radius: 100px;
+  background-color: white;
+}
+
+.dot::after {
+  content: "";
+  position: absolute;
+  bottom: 2px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  width: 15px;
+  height: 15px;
+  border-radius: 100px;
+  background-color: #3e4095;
+}
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+
+.frame {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  overflow: hidden;
+  background: transparent;
+  color: #333;
+  font-family: "Open Sans", Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.center {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  border-radius: 3%;
+}
+.circleloading {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 20%;
+  height: 20%;
+  border-radius: 50%;
+  background: #fff;
+  filter: drop-shadow(3px 3px 10px rgba(0, 0, 0, 0.9));
+}
+#circle1 {
+  width: 0%;
+  height: 0%;
+  animation: circle1-scale 6s infinite;
+}
+@keyframes circle1-scale {
+  from {
+    width: 0;
+    height: 0;
+  }
+  20% {
+    width: 30%;
+    height: 30%;
+  }
+  80% {
+    width: 30%;
+    height: 30%;
+  }
+  to {
+    width: 0;
+    height: 0;
+  }
+}
+#circle2 {
+  width: 0%;
+  height: 0%;
+  animation: circle2-scale 6s infinite;
+}
+@keyframes circle2-scale {
+  from {
+    width: 0;
+    height: 0;
+  }
+  15% {
+    width: 0;
+    height: 0;
+  }
+  35% {
+    width: 18%;
+    height: 18%;
+  }
+  65% {
+    width: 18%;
+    height: 18%;
+  }
+  85% {
+    width: 0;
+    height: 0;
+  }
+  to {
+    width: 0;
+    height: 0;
+  }
+}
+#circle3 {
+  width: 0%;
+  height: 0%;
+  animation: circle3-scale 6s infinite;
+}
+@keyframes circle3-scale {
+  from {
+    width: 0%;
+    height: 0%;
+  }
+  30% {
+    width: 0;
+    height: 0;
+  }
+  50% {
+    width: 7.5%;
+    height: 7.5%;
+  }
+  70% {
+    width: 0;
+    height: 0;
+  }
+  to {
+    width: 0;
+    height: 0;
+  }
+}
+#loading {
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 200%;
+}
+/* make #loading blink too */
+#loading {
+  animation: blink 3s infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
