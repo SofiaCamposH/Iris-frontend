@@ -10,25 +10,25 @@ import Camera from "../../media/camera.png";
 const Sensors = () => {
   const cards = [
     {
-      url: "/heart",
+      url: "heart",
       logo: Heart,
       title: "Heart Rate",
       description: "Check heart rate history",
     },
     {
-      url: "/movement",
+      url: "movement",
       logo: Movement,
       title: "Movement",
       description: "Check movement history",
     },
     {
-      url: "/location",
+      url: "location",
       logo: Location,
       title: "Location",
       description: "Check location",
     },
     {
-      url: "/camera",
+      url: "camera",
       logo: Camera,
       title: "Camera",
       description: "Coming soon",

@@ -8,6 +8,7 @@ import MainLayout from "./components/Layout";
 import UserList from "./components/List";
 import Login from "./pages/Login";
 import Image404 from "./media/404.png";
+import HeartSensor from "./pages/HeartSensor";
 
 function App() {
   return (
@@ -16,8 +17,12 @@ function App() {
         <Row justify="start" align="middle" style={{ marginTop: 30 }}>
           <Routes>
             <Route exact path="/" element={<Login />} />
-            <Route exact path="/users" element={<UserList />} />
-            <Route exact path="/sensors" element={<Sensors />} />
+            <Route exact path="users" element={<UserList />} />
+            <Route path="sensors" element={<Sensors />} />
+
+            <Route path="sensors/heart" element={<HeartSensor />} />
+
+            {/* same as above but sensors has children */}
 
             <Route path="*" element={<Image src={Image404} />} />
           </Routes>
