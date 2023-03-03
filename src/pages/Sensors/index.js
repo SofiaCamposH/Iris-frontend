@@ -37,7 +37,7 @@ const Sensors = () => {
 
   return (
     <>
-      <Row gutter={[12, 12]} style={{ padding: "0 5px" }}>
+      <Row gutter={[0, 24]} style={{ padding: "0 5px" }}>
         {cards.map((card, _) => (
           <Col span={12} key={card.title}>
             <OptionCard

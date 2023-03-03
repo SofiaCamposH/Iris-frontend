@@ -7,6 +7,7 @@ const OptionCard = ({ logo, title, description, url }) => {
     <Link to={url}>
       <Card
         hoverable
+        style={{ margin: 5 }}
         cover={
           <img
             alt="example"

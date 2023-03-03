@@ -68,7 +68,7 @@ Copy code .pin-container {
   left: 50%;
   width: 400px;
   height: 400px;
-  margin-top: -200px;
+  margin-top: 0;
   margin-left: -200px;
   border-radius: 2px;
   overflow: hidden;

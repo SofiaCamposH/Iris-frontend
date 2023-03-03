@@ -27,11 +27,15 @@ const MainLayout = ({ children }) => {
           </Col>
         </Row>
       </Header>
-      <Content>
+      <Content
+        style={{
+          backgroundColor: "#B6DBEF",
+          height: "100%",
+        }}
+      >
         <Row
           justify="center"
           style={{
-            height: "100vh",
             width: "100%",
             backgroundColor: "#B6DBEF",
           }}
@@ -49,7 +53,7 @@ const MainLayout = ({ children }) => {
           </Col>
         </Row>
       </Content>
-      <div style={{ position: "absolute", left: -5, bottom: -10 }}>
+      <div style={{ position: "absolute", left: -5, bottom: 0 }}>
         <Image
           preview={false}
           src={Background}
